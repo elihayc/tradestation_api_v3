@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Auth Example</title>
+</head>
+<body>
+  {% if message %}
+      <h1>API Actions</h1>
+      <p><a href="/account_details">Accounts Details</a></p>
+      <p><a href="/refresh_token">Refresh Token</a></p>
+      <p><a href="/logout">Logout</a></p>
+      <div><pre>{{message}}</pre></div>
+  {% else %}
+    <h1>Login Type</h1>
+    <p><a href="/login">Manual Login</a></p>
+    {% if has_refresh_token == True %}
+        <p><a href="/refresh_token">Refresh Token Login</a></p>
+    {% endif %}
+  {% endif %}
+</body>
+</html>
