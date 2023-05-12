@@ -19,8 +19,10 @@ client_secret = env.get("CLIENT_SECRET")
 redirect_uri = env.get("REDIRECT_URI")  # TS support 'http://localhost:3000' by default
 refresh_token = env.get("REFRESH_TOKEN")
 
+live_base_url = "https://api.tradestation.com/v3"
+sim_base_url = "https://sim-api.tradestation.com/v3"
 
-api_base_url = "https://api.tradestation.com/v3" # https://sim-api.tradestation.com/v3 for simulator account
+api_base_url = sim_base_url
 auth_url = "https://signin.tradestation.com/authorize"
 token_url = "https://signin.tradestation.com/oauth/token"
 scopes = ["ReadAccount", "MarketData"]
